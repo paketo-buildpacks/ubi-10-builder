@@ -99,6 +99,9 @@ jobs:
     runs-on: ubuntu-24.04
     needs: update
     steps:
+    - name: Checkout
+      uses: actions/checkout@v5
+
     - name: Open Pull Request
       if: ${{ needs.update.outputs.commit_sha != '' }}
       uses: paketo-buildpacks/github-config/actions/pull-request/open@main
