@@ -1,15 +1,15 @@
-description = "ubi 9 builder with no buildpacks included. To use, specify buildpacks at build time."
+description = "UBI 10 Buildpackless Builder with no buildpacks included. To use, specify buildpacks at build time."
 
 [build]
-  image = "docker.io/paketobuildpacks/build-ubi9-base:0.0.32"
+  image = "docker.io/paketobuildpacks/ubi-10-build-base:0.0.6"
 
 [lifecycle]
-  version = "0.20.16"
+  version = "0.21.0"
 
 [run]
 
   [[run.images]]
-    image = "docker.io/paketobuildpacks/run-ubi9-base:latest"
+    image = "docker.io/paketobuildpacks/ubi-10-run-base:latest"
 
 [[targets]]
   arch = "amd64"
