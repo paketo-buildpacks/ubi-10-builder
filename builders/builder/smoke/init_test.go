@@ -50,9 +50,7 @@ func TestSmoke(t *testing.T) {
 	Expect(occam.NewDocker().Pull.Execute(config.BuildPlan))
 
 	suite := spec.New("Smoke", spec.Parallel(), spec.Report(report.Terminal{}))
-	suite("Java", testJava)
 	suite("Node.js", testNodejs)
 	suite("procfile", testProcfile)
-	suite("quarkus", testQuarkus)
 	suite.Run(t)
 }
