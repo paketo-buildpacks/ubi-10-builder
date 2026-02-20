@@ -8,8 +8,8 @@ description = "Ubi 10 builder with buildpacks for Node.js and Procfile"
   version = "10.0.5"
 
 [[buildpacks]]
-  uri = "docker://docker.io/paketobuildpacks/procfile:5.12.1"
-  version = "5.12.1"
+  uri = "docker://docker.io/paketobuildpacks/procfile:5.13.0"
+  version = "5.13.0"
 
 [[extensions]]
   id = "paketo-buildpacks/ubi-nodejs-extension"
@@ -17,7 +17,7 @@ description = "Ubi 10 builder with buildpacks for Node.js and Procfile"
   version = "1.6.10"
 
 [lifecycle]
-  version = "0.21.1"
+  version = "0.21.4"
 
 [[order]]
 
@@ -29,7 +29,7 @@ description = "Ubi 10 builder with buildpacks for Node.js and Procfile"
 
   [[order.group]]
     id = "paketo-buildpacks/procfile"
-    version = "5.12.1"
+    version = "5.13.0"
 
 [[order-extensions]]
 
