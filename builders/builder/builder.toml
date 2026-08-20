@@ -17,7 +17,7 @@ description = "Ubi 10 builder with buildpacks for Node.js and Procfile"
   version = "1.6.36"
 
 [lifecycle]
-  version = "0.21.16"
+  version = "0.21.17"
 
 [[order]]
 
