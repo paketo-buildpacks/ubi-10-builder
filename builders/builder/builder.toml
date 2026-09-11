@@ -1,7 +1,7 @@
 description = "Ubi 10 builder with buildpacks for Node.js and Procfile"
 
 [build]
-  image = "docker.io/paketobuildpacks/ubi-10-build-base:0.0.76"
+  image = "docker.io/paketobuildpacks/ubi-10-build-base:0.0.77"
 
 [[buildpacks]]
   uri = "docker://docker.io/paketobuildpacks/nodejs:10.10.1"
@@ -17,7 +17,7 @@ description = "Ubi 10 builder with buildpacks for Node.js and Procfile"
   version = "1.6.39"
 
 [lifecycle]
-  version = "0.21.18"
+  version = "0.21.19"
 
 [[order]]
 
