@@ -1,51 +1,47 @@
-description = "Ubi 10 builder with buildpacks for Node.js and Procfile"
-
-[build]
-  image = "docker.io/paketobuildpacks/ubi-10-build-base:0.0.108"
+description = 'Ubi 10 builder with buildpacks for Node.js and Procfile'
 
 [[buildpacks]]
-  uri = "docker://docker.io/paketobuildpacks/nodejs:10.15.0"
-  version = "10.15.0"
+uri = 'docker://docker.io/paketobuildpacks/nodejs:10.15.0'
+version = '10.15.0'
 
 [[buildpacks]]
-  uri = "docker://docker.io/paketobuildpacks/procfile:5.15.7"
-  version = "5.15.7"
-
-[[extensions]]
-  id = "paketo-buildpacks/ubi-nodejs-extension"
-  uri = "docker://docker.io/paketobuildpacks/ubi-nodejs-extension:1.6.47"
-  version = "1.6.47"
+uri = 'docker://docker.io/paketobuildpacks/procfile:5.15.7'
+version = '5.15.7'
 
 [lifecycle]
-  version = "0.21.28"
+version = '0.21.28'
 
 [[order]]
-
-  [[order.group]]
-    id = "paketo-buildpacks/nodejs"
-    version = "10.15.0"
+[[order.group]]
+id = 'paketo-buildpacks/nodejs'
+version = '10.15.0'
 
 [[order]]
+[[order.group]]
+id = 'paketo-buildpacks/procfile'
+version = '5.15.7'
 
-  [[order.group]]
-    id = "paketo-buildpacks/procfile"
-    version = "5.15.7"
+[[extensions]]
+id = 'paketo-buildpacks/ubi-nodejs-extension'
+uri = 'docker://docker.io/paketobuildpacks/ubi-nodejs-extension:1.6.47'
+version = '1.6.47'
 
 [[order-extensions]]
+[[order-extensions.group]]
+id = 'paketo-buildpacks/ubi-nodejs-extension'
+version = '1.6.47'
 
-  [[order-extensions.group]]
-    id = "paketo-buildpacks/ubi-nodejs-extension"
-    version = "1.6.47"
+[build]
+image = 'docker.io/paketobuildpacks/ubi-10-build-base:0.0.108'
 
 [run]
-
-  [[run.images]]
-    image = "docker.io/paketobuildpacks/ubi-10-run-base:latest"
-
-[[targets]]
-  arch = "amd64"
-  os = "linux"
+[[run.images]]
+image = 'docker.io/paketobuildpacks/ubi-10-run-base:latest'
 
 [[targets]]
-  arch = "arm64"
-  os = "linux"
+os = 'linux'
+arch = 'amd64'
+
+[[targets]]
+os = 'linux'
+arch = 'arm64'
