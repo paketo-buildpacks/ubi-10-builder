@@ -4,7 +4,7 @@ description = 'UBI 10 Buildpackless Builder with no buildpacks included. To use,
 version = '0.21.29'
 
 [build]
-image = 'docker.io/paketobuildpacks/ubi-10-build-base:0.0.110'
+image = 'docker.io/paketobuildpacks/ubi-10-build-base:0.0.111'
 
 [run]
 [[run.images]]
